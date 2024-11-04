@@ -27,7 +27,7 @@
   </collision>
 </link>
 
-<link name="shoulder_servo_arm1">
+<link name="hip_servo_arm1">
   <inertial>
     <origin xyz="0.003408873275648719 -1.4639269367218086e-05 0.00786114353077158" rpy="0 0 0"/>
     <mass value="0.0032701003729527518"/>
@@ -36,7 +36,7 @@
   <visual>
     <origin xyz="-0.065722 -0.013766 -0.136395" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/shoulder_servo_arm1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/hip_servo_arm1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -44,12 +44,12 @@
   <collision>
     <origin xyz="-0.065722 -0.013766 -0.136395" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/shoulder_servo_arm1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/hip_servo_arm1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="leg_hip_servo_holder1">
+<link name="knee_servo_holder1">
   <inertial>
     <origin xyz="0.029112867057541444 0.0007342512183261922 0.01505536119753409" rpy="0 0 0"/>
     <mass value="0.03470303413377985"/>
@@ -58,7 +58,7 @@
   <visual>
     <origin xyz="-0.071722 -0.013766 -0.136375" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/leg_hip_servo_holder1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/knee_servo_holder1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -66,12 +66,12 @@
   <collision>
     <origin xyz="-0.071722 -0.013766 -0.136375" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/leg_hip_servo_holder1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/knee_servo_holder1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="femur_servo1">
+<link name="knee_servo1">
   <inertial>
     <origin xyz="0.008450313064643972 -0.026295800399069355 -0.0027954725770833744" rpy="0 0 0"/>
     <mass value="0.04604548230153534"/>
@@ -80,7 +80,7 @@
   <visual>
     <origin xyz="-0.096344 -0.042832 -0.157979" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/femur_servo1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/knee_servo1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -88,34 +88,12 @@
   <collision>
     <origin xyz="-0.096344 -0.042832 -0.157979" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/femur_servo1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/knee_servo1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="tibia_servo1">
-  <inertial>
-    <origin xyz="-0.04068259292808729 -0.02629580039906935 0.007537566105686233" rpy="0 0 0"/>
-    <mass value="0.04604548230153534"/>
-    <inertia ixx="7.687962796280889e-06" iyy="8.016869330743689e-06" izz="1.2595579106517525e-05" ixy="2.701494110014704e-08" iyz="-9.166077852241702e-11" ixz="1.6651571605082183e-08"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.145136 -0.042832 -0.127147" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="meshes/tibia_servo1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin xyz="-0.145136 -0.042832 -0.127147" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="meshes/tibia_servo1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="femur_servo_arm1">
+<link name="knee_servo_arm1">
   <inertial>
     <origin xyz="-0.006380329777508589 -0.0033823794648786248 -0.0046119401065257415" rpy="0 0 0"/>
     <mass value="0.0032701003729527518"/>
@@ -124,7 +102,7 @@
   <visual>
     <origin xyz="-0.094959 0.005034 -0.155217" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/femur_servo_arm1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/knee_servo_arm1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -132,7 +110,7 @@
   <collision>
     <origin xyz="-0.094959 0.005034 -0.155217" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/femur_servo_arm1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/knee_servo_arm1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -159,16 +137,16 @@
   </collision>
 </link>
 
-<link name="leg_knee_up1">
+<link name="leg_tibia1">
   <inertial>
-    <origin xyz="-0.026929521704993173 -0.008190835888559454 -0.038738944463850025" rpy="0 0 0"/>
-    <mass value="0.01674559467050063"/>
-    <inertia ixx="1.071905304072374e-05" iyy="1.533751254460884e-05" izz="5.6379250300471495e-06" ixy="1.661466846802254e-07" iyz="2.460659377263795e-07" ixz="-6.933535667269774e-06"/>
+    <origin xyz="-0.026929521704993173 -0.00819083588855945 -0.038738944463850025" rpy="0 0 0"/>
+    <mass value="0.016745594670500637"/>
+    <inertia ixx="1.071905304072374e-05" iyy="1.5337512544608784e-05" izz="5.637925030047014e-06" ixy="1.661466846802254e-07" iyz="2.460659377263863e-07" ixz="-6.933535667269774e-06"/>
   </inertial>
   <visual>
     <origin xyz="-0.094959 0.011034 -0.155217" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/leg_knee_up1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/leg_tibia1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -176,7 +154,7 @@
   <collision>
     <origin xyz="-0.094959 0.011034 -0.155217" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/leg_knee_up1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/leg_tibia1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -203,18 +181,18 @@
   </collision>
 </link>
 
-<joint name="Revolute_23" type="continuous">
+<joint name="hip_joint" type="continuous">
   <origin xyz="0.065722 0.013766 0.136395" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="shoulder_servo_arm1"/>
+  <child link="hip_servo_arm1"/>
   <axis xyz="-0.999994 0.0 0.003393"/>
 </joint>
-<transmission name="Revolute_23_tran">
+<transmission name="hip_joint_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_23">
+  <joint name="hip_joint">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute_23_actr">
+  <actuator name="hip_joint_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
@@ -222,34 +200,28 @@
 
 <joint name="Rigid_24" type="fixed">
   <origin xyz="0.006 0.0 -2e-05" rpy="0 0 0"/>
-  <parent link="shoulder_servo_arm1"/>
-  <child link="leg_hip_servo_holder1"/>
+  <parent link="hip_servo_arm1"/>
+  <child link="knee_servo_holder1"/>
 </joint>
 
 <joint name="Rigid_25" type="fixed">
   <origin xyz="0.024622 0.029066 0.021604" rpy="0 0 0"/>
-  <parent link="leg_hip_servo_holder1"/>
-  <child link="femur_servo1"/>
+  <parent link="knee_servo_holder1"/>
+  <child link="knee_servo1"/>
 </joint>
 
-<joint name="Rigid_26" type="fixed">
-  <origin xyz="0.073414 0.029066 -0.009228" rpy="0 0 0"/>
-  <parent link="leg_hip_servo_holder1"/>
-  <child link="tibia_servo1"/>
-</joint>
-
-<joint name="Revolute_28" type="continuous">
+<joint name="knee_joint" type="continuous">
   <origin xyz="-0.001385 -0.047866 -0.002762" rpy="0 0 0"/>
-  <parent link="femur_servo1"/>
-  <child link="femur_servo_arm1"/>
+  <parent link="knee_servo1"/>
+  <child link="knee_servo_arm1"/>
   <axis xyz="0.0 1.0 -0.0"/>
 </joint>
-<transmission name="Revolute_28_tran">
+<transmission name="knee_joint_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_28">
+  <joint name="knee_joint">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute_28_actr">
+  <actuator name="knee_joint_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
@@ -263,22 +235,22 @@
 
 <joint name="Rigid_37" type="fixed">
   <origin xyz="0.0 -0.006 0.0" rpy="0 0 0"/>
-  <parent link="femur_servo_arm1"/>
-  <child link="leg_knee_up1"/>
+  <parent link="knee_servo_arm1"/>
+  <child link="leg_tibia1"/>
 </joint>
 
-<joint name="Revolute_38" type="continuous">
+<joint name="tibia_joint" type="continuous">
   <origin xyz="-0.049674 -0.013 -0.076733" rpy="0 0 0"/>
-  <parent link="leg_knee_up1"/>
+  <parent link="leg_tibia1"/>
   <child link="leg_ankle1"/>
   <axis xyz="0.0 1.0 -0.0"/>
 </joint>
-<transmission name="Revolute_38_tran">
+<transmission name="tibia_joint_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute_38">
+  <joint name="tibia_joint">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute_38_actr">
+  <actuator name="tibia_joint_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
