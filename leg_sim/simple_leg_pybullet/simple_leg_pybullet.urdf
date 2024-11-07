@@ -7,9 +7,9 @@
 
 <link name="base_link">
   <inertial>
-    <origin xyz="0.044185099378001774 0.013766139027551152 0.1463041433934786" rpy="0 0 0"/>
-    <mass value="0.04604548230153534"/>
-    <inertia ixx="8.017048864265852e-06" iyy="1.2595635604748315e-05" izz="7.68772676452631e-06" ixy="-2.887704723779361e-17" iyz="2.506052006537307e-15" ixz="2.5898326586038488e-08"/>
+    <origin xyz="-0.7208494750892634 -0.12888386097309137 0.25163567862724456" rpy="0 0 0"/>
+    <mass value="46.04548176197378"/>
+    <inertia ixx="0.8017048676914813" iyy="1.2595635258587237" izz="0.7687726578689222" ixy="-4.669153952363558e-12" iyz="2.4889557082019564e-10" ixz="0.002589849941111666"/>
   </inertial>
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -29,12 +29,12 @@
 
 <link name="hip_servo_arm1">
   <inertial>
-    <origin xyz="0.003408873275648719 -1.4639269367218086e-05 0.00786114353077158" rpy="0 0 0"/>
-    <mass value="0.0032701003729527518"/>
-    <inertia ixx="3.5429584528513607e-07" iyy="3.2642601211330493e-07" izz="4.505590662071308e-08" ixy="-2.6001808069200092e-11" iyz="4.05955679235774e-09" ixz="-3.5575540591688856e-09"/>
+    <origin xyz="0.034092323822238035 -0.00014768049968458263 0.07860788048713585" rpy="0 0 0"/>
+    <mass value="3.2700935144949623"/>
+    <inertia ixx="0.03542949459257766" iyy="0.032642520701094524" izz="0.0045055699059785015" ixy="-2.6047868865175516e-06" iyz="0.0004059315391450047" ixz="-0.0003557361179699625"/>
   </inertial>
   <visual>
-    <origin xyz="-0.065722 -0.013766 -0.136395" rpy="0 0 0"/>
+    <origin xyz="0.505484 0.128884 -0.152548" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/hip_servo_arm1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -42,7 +42,7 @@
     <material/>
   </visual>
   <collision>
-    <origin xyz="-0.065722 -0.013766 -0.136395" rpy="0 0 0"/>
+    <origin xyz="0.505484 0.128884 -0.152548" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/hip_servo_arm1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -51,12 +51,12 @@
 
 <link name="knee_servo_holder1">
   <inertial>
-    <origin xyz="0.029112867057541444 0.0007342512183261922 0.01505536119753409" rpy="0 0 0"/>
-    <mass value="0.03470303413377985"/>
-    <inertia ixx="1.0238114845417443e-05" iyy="2.859304047357755e-05" izz="2.335625968764003e-05" ixy="-9.668646894346415e-08" iyz="1.8083210382636885e-07" ixz="-1.9403735519272092e-06"/>
+    <origin xyz="0.2911322012883448 0.007341260874273475 0.15055385973447286" rpy="0 0 0"/>
+    <mass value="34.703034418237515"/>
+    <inertia ixx="1.023811488482926" iyy="2.8593040779316174" izz="2.335625995537532" ixy="-0.009668647534420871" iyz="0.01808321062817919" ixz="-0.19403734493725966"/>
   </inertial>
   <visual>
-    <origin xyz="-0.071722 -0.013766 -0.136375" rpy="0 0 0"/>
+    <origin xyz="0.445484 0.128884 -0.152344" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/knee_servo_holder1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -64,7 +64,7 @@
     <material/>
   </visual>
   <collision>
-    <origin xyz="-0.071722 -0.013766 -0.136375" rpy="0 0 0"/>
+    <origin xyz="0.445484 0.128884 -0.152344" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/knee_servo_holder1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -73,12 +73,12 @@
 
 <link name="knee_servo1">
   <inertial>
-    <origin xyz="0.008450313064643972 -0.026295800399069355 -0.0027954725770833744" rpy="0 0 0"/>
-    <mass value="0.04604548230153534"/>
-    <inertia ixx="7.687962796281648e-06" iyy="8.016869330743906e-06" izz="1.2595579106517091e-05" ixy="-2.7014941100214802e-08" iyz="9.166077853596955e-11" ixz="1.6651571604973762e-08"/>
+    <origin xyz="0.2292316617618021 0.05443474684650447 -0.05004347896974942" rpy="0 0 0"/>
+    <mass value="46.04548176197379"/>
+    <inertia ixx="0.7687962611612393" iyy="0.801686914226087" izz="1.259557876033734" ixy="-0.002701511393835454" iyz="9.166136898386412e-06" ixz="0.0016651571114383312"/>
   </inertial>
   <visual>
-    <origin xyz="-0.096344 -0.042832 -0.157979" rpy="0 0 0"/>
+    <origin xyz="0.343989 0.173618 -0.390473" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/knee_servo1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -86,21 +86,43 @@
     <material/>
   </visual>
   <collision>
-    <origin xyz="-0.096344 -0.042832 -0.157979" rpy="0 0 0"/>
+    <origin xyz="0.343989 0.173618 -0.390473" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/knee_servo1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="knee_servo_arm1">
+<link name="tibia_servo1">
   <inertial>
-    <origin xyz="-0.006380329777508589 -0.0033823794648786248 -0.0046119401065257415" rpy="0 0 0"/>
-    <mass value="0.0032701003729527518"/>
-    <inertia ixx="1.449556706211477e-07" iyy="3.543164263377453e-07" izz="2.2650566704396417e-07" ixy="-2.0587646704018778e-09" iyz="-1.4333017412733568e-09" ixz="-1.347184405892763e-07"/>
+    <origin xyz="-0.26209639394711215 0.05443474684650418 0.05328490784446349" rpy="0 0 0"/>
+    <mass value="46.045481761973825"/>
+    <inertia ixx="0.7687962611576804" iyy="0.8016869142236049" izz="1.2595578760347947" ixy="0.0027015113887906006" iyz="-9.166134777860435e-06" ixz="0.0016651571074425275"/>
   </inertial>
   <visual>
-    <origin xyz="-0.094959 0.005034 -0.155217" rpy="0 0 0"/>
+    <origin xyz="-0.14393 0.173618 -0.082155" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/tibia_servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin xyz="-0.14393 0.173618 -0.082155" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/tibia_servo1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee_servo_arm1">
+  <inertial>
+    <origin xyz="-0.06379990442981712 -0.033825103255293365 -0.04611829989889332" rpy="0 0 0"/>
+    <mass value="3.2700935144949637"/>
+    <inertia ixx="0.014495503196780168" iyy="0.03543155247995455" izz="0.022650529558752908" ixy="-0.0002058635609396009" iyz="-0.0001433153360398398" ixz="-0.013471808043867994"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.213114 0.334884 -0.340763" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/knee_servo_arm1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -108,7 +130,7 @@
     <material/>
   </visual>
   <collision>
-    <origin xyz="-0.094959 0.005034 -0.155217" rpy="0 0 0"/>
+    <origin xyz="0.213114 0.334884 -0.340763" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/knee_servo_arm1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -117,12 +139,12 @@
 
 <link name="leg_foot1Component161">
   <inertial>
-    <origin xyz="-0.004047748981101135 -4.765341062277009e-05 0.041632138897485876" rpy="0 0 0"/>
-    <mass value="0.05068893861578388"/>
-    <inertia ixx="2.8627829248099098e-05" iyy="2.8848623228453483e-05" izz="4.328139291197449e-06" ixy="-8.531930034555977e-09" iyz="-8.33273852910899e-08" ixz="2.689289817810322e-06"/>
+    <origin xyz="-0.009597033813685287 0.004998466966501802 0.001971081667967667" rpy="0 0 0"/>
+    <mass value="4.115954761083666"/>
+    <inertia ixx="0.08128951131559603" iyy="0.07805791909566073" izz="0.03652057542960385" ixy="-0.0020446075032746133" iyz="-0.02090309762623699" ixz="-0.0003462892726148539"/>
   </inertial>
   <visual>
-    <origin xyz="-0.118736 0.017434 -0.026555" rpy="0 0 0"/>
+    <origin xyz="-0.024664 0.458884 0.945855" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/leg_foot1Component161.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -130,7 +152,7 @@
     <material/>
   </visual>
   <collision>
-    <origin xyz="-0.118736 0.017434 -0.026555" rpy="0 0 0"/>
+    <origin xyz="-0.024664 0.458884 0.945855" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/leg_foot1Component161.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -139,12 +161,12 @@
 
 <link name="leg_tibia1">
   <inertial>
-    <origin xyz="-0.026929521704993173 -0.00819083588855945 -0.038738944463850025" rpy="0 0 0"/>
-    <mass value="0.016745594670500637"/>
-    <inertia ixx="1.071905304072374e-05" iyy="1.5337512544608784e-05" izz="5.637925030047014e-06" ixy="1.661466846802254e-07" iyz="2.460659377263863e-07" ixz="-6.933535667269774e-06"/>
+    <origin xyz="-0.26929226364819947 -0.08190966861924237 -0.38738841977327093" rpy="0 0 0"/>
+    <mass value="16.745590583555348"/>
+    <inertia ixx="1.0719037610437123" iyy="1.5337573766475576" izz="0.5637986687243881" ixy="0.016616254344223425" iyz="0.024606718629198387" ixz="-0.6933508003516472"/>
   </inertial>
   <visual>
-    <origin xyz="-0.094959 0.011034 -0.155217" rpy="0 0 0"/>
+    <origin xyz="0.213114 0.394884 -0.340763" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/leg_tibia1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -152,7 +174,7 @@
     <material/>
   </visual>
   <collision>
-    <origin xyz="-0.094959 0.011034 -0.155217" rpy="0 0 0"/>
+    <origin xyz="0.213114 0.394884 -0.340763" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/leg_tibia1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -161,12 +183,12 @@
 
 <link name="leg_ankle1">
   <inertial>
-    <origin xyz="0.03923394057235093 0.0065998081894450625 -0.02698059517291853" rpy="0 0 0"/>
-    <mass value="0.022209898104400553"/>
-    <inertia ixx="7.105077866646786e-06" iyy="1.814216094624772e-05" izz="1.415137046565195e-05" ixy="9.401919155461189e-11" iyz="-2.0899198913682513e-10" ixz="7.934369953340676e-06"/>
+    <origin xyz="0.3923382836808676 0.06599569282723788 -0.2698106316820683" rpy="0 0 0"/>
+    <mass value="22.20997101680633"/>
+    <inertia ixx="0.7104830009441105" iyy="1.8142275849970257" izz="1.4151463313382582" ixy="2.7837056675306115e-05" iyz="8.148251020578812e-06" ixz="0.7934334818267423"/>
   </inertial>
   <visual>
-    <origin xyz="-0.045285 0.024034 -0.078484" rpy="0 0 0"/>
+    <origin xyz="0.709852 0.524884 0.426566" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/leg_ankle1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -174,7 +196,7 @@
     <material/>
   </visual>
   <collision>
-    <origin xyz="-0.045285 0.024034 -0.078484" rpy="0 0 0"/>
+    <origin xyz="0.709852 0.524884 0.426566" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/leg_ankle1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -182,7 +204,7 @@
 </link>
 
 <joint name="hip_joint" type="continuous">
-  <origin xyz="0.065722 0.013766 0.136395" rpy="0 0 0"/>
+  <origin xyz="-0.505484 -0.128884 0.152548" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="hip_servo_arm1"/>
   <axis xyz="-0.999994 0.0 0.003393"/>
@@ -199,19 +221,25 @@
 </transmission>
 
 <joint name="Rigid_24" type="fixed">
-  <origin xyz="0.006 0.0 -2e-05" rpy="0 0 0"/>
+  <origin xyz="0.06 0.0 -0.000204" rpy="0 0 0"/>
   <parent link="hip_servo_arm1"/>
   <child link="knee_servo_holder1"/>
 </joint>
 
 <joint name="Rigid_25" type="fixed">
-  <origin xyz="0.024622 0.029066 0.021604" rpy="0 0 0"/>
+  <origin xyz="0.101495 -0.044734 0.238129" rpy="0 0 0"/>
   <parent link="knee_servo_holder1"/>
   <child link="knee_servo1"/>
 </joint>
 
+<joint name="Rigid_26" type="fixed">
+  <origin xyz="0.589414 -0.044734 -0.070189" rpy="0 0 0"/>
+  <parent link="knee_servo_holder1"/>
+  <child link="tibia_servo1"/>
+</joint>
+
 <joint name="knee_joint" type="continuous">
-  <origin xyz="-0.001385 -0.047866 -0.002762" rpy="0 0 0"/>
+  <origin xyz="0.130875 -0.161266 -0.04971" rpy="0 0 0"/>
   <parent link="knee_servo1"/>
   <child link="knee_servo_arm1"/>
   <axis xyz="0.0 1.0 -0.0"/>
@@ -228,19 +256,19 @@
 </transmission>
 
 <joint name="Rigid_35" type="fixed">
-  <origin xyz="0.073451 0.0066 -0.051929" rpy="0 0 0"/>
+  <origin xyz="0.734516 0.066 -0.519289" rpy="0 0 0"/>
   <parent link="leg_ankle1"/>
   <child link="leg_foot1Component161"/>
 </joint>
 
 <joint name="Rigid_37" type="fixed">
-  <origin xyz="0.0 -0.006 0.0" rpy="0 0 0"/>
+  <origin xyz="0.0 -0.06 0.0" rpy="0 0 0"/>
   <parent link="knee_servo_arm1"/>
   <child link="leg_tibia1"/>
 </joint>
 
 <joint name="tibia_joint" type="continuous">
-  <origin xyz="-0.049674 -0.013 -0.076733" rpy="0 0 0"/>
+  <origin xyz="-0.496738 -0.13 -0.767329" rpy="0 0 0"/>
   <parent link="leg_tibia1"/>
   <child link="leg_ankle1"/>
   <axis xyz="0.0 1.0 -0.0"/>
