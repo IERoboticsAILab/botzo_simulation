@@ -50,8 +50,8 @@ tibia_pos = p.getLinkState(robotId, tibia_joint)[0]
 end_effector_pos = p.getLinkState(robotId, end_effector)[0]
 
 # Calculating distance between the joints
-coxa = calculate_distance(shoulder_pos, femur_pos)
-femur = calculate_distance(femur_pos, tibia_pos)
+coxa = calculate_distance(shoulder_pos, femur_pos) 
+femur = calculate_distance(femur_pos, tibia_pos) 
 tibia = calculate_distance(tibia_pos, end_effector_pos)
 
 print("Shoulder to Femur Distance: ", coxa)
@@ -72,33 +72,72 @@ def legIK(x,y,z):
   return [coxa_angle, femur_angle, tibia_angle]
 
 
-target_points = [(0, -0.36, 0.6), (0.6, -0.36, 0.6)]
+# # Define y and z as fixed values, and generate x-coordinates for a straight line
+# y_fixed = -0.36
+# z_fixed = 0.6
+# x_start = 0
+# x_end = 0.6
+# num_points = 20  # Reduced number of points
 
+# # Generate target points with larger steps along the x-axis
+# x_values = np.linspace(x_start, x_end, num_points)
+# target_points = [(x, y_fixed, z_fixed) for x in x_values]
 
+target_points = [(0, -0.36, 0.6), (0, -0.36, 0.8)]
 
-while True:
-    for i in range (10000):
-        target_position = 0.5 *math.sin(i*0.01)
+while True: 
+    # Simulation loop to move the joints to each target point
+    for x, y, z in target_points:
+        # Calculate joint angles for the given target
+        joint_angles = legIK(x, y, z)
+        coxa_angle, femur_angle, tibia_angle = joint_angles
+        
+        # Run the simulation for a certain number of steps to allow the leg to reach the target
+        for i in range(500):
+            # Control each joint to move towards the calculated IK angles
+            p.setJointMotorControl2(robotId, shoulder_joint, p.POSITION_CONTROL, targetPosition=coxa_angle)
+            p.setJointMotorControl2(robotId, femur_joint, p.POSITION_CONTROL, targetPosition=femur_angle)
+            p.setJointMotorControl2(robotId, tibia_joint, p.POSITION_CONTROL, targetPosition=tibia_angle)
+            
+            # Step the simulation
+            p.stepSimulation()
 
-        # if i % 100 == 0:
-        #     print("Target Position: ", target_position)
+            link_state = p.getLinkState(robotId, 6)
+            current_pos = link_state[0]
 
-        # p.setJointMotorControl2(robotId, knee_joint, p.POSITION_CONTROL, targetPosition = target_position)
-        p.setJointMotorControl2(robotId, tibia_joint, p.POSITION_CONTROL, targetPosition = target_position)
-        p.stepSimulation()
+            # if i % 100 == 0:
+            #     print("Current Position: ", current_pos)
 
-        link_state = p.getLinkState(robotId, 6)
-        current_pos = link_state[0]
+            if previous_pos is not None:
+                p.addUserDebugLine(previous_pos, current_pos, [1, 0, 0], 1)
 
-        # if i % 100 == 0:
-        #     print("Current Position: ", current_pos)
+            previous_pos = current_pos
 
-        if previous_pos is not None:
-            p.addUserDebugLine(previous_pos, current_pos, [1, 0, 0], 1)
+            time.sleep(1./240.)  # Control simulation speed if needed
 
-        previous_pos = current_pos
+# while True:
+#     for i in range (10000):
+#         target_position = 0.5 *math.sin(i*0.01)
 
-        time.sleep(1./240.)
+#         # if i % 100 == 0:
+#         #     print("Target Position: ", target_position)
+
+#         # p.setJointMotorControl2(robotId, knee_joint, p.POSITION_CONTROL, targetPosition = target_position)
+#         p.setJointMotorControl2(robotId, tibia_joint, p.POSITION_CONTROL, targetPosition = target_position)
+#         p.stepSimulation()
+
+#         link_state = p.getLinkState(robotId, 6)
+#         current_pos = link_state[0]
+
+#         # if i % 100 == 0:
+#         #     print("Current Position: ", current_pos)
+
+#         if previous_pos is not None:
+#             p.addUserDebugLine(previous_pos, current_pos, [1, 0, 0], 1)
+
+#         previous_pos = current_pos
+
+#         time.sleep(1./240.)
 
 
 
