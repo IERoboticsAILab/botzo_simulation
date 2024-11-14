@@ -2,7 +2,6 @@ import pybullet as p
 import time
 import pybullet_data
 import math 
-import numpy as np
 
 physicsClient = p.connect(p.GUI)#or p.DIRECT for non-graphical version
 p.setAdditionalSearchPath(pybullet_data.getDataPath()) #optionally
@@ -10,7 +9,7 @@ p.setGravity(0,0,-10, physicsClientId=physicsClient)
 planeId = p.loadURDF("plane.urdf")
 cubeStartPos = [0,0,2]
 cubeStartOrientation = p.getQuaternionFromEuler([0,0,0])
-robotId = p.loadURDF("./simple_leg_pybullet/simple_leg_pybullet.urdf",cubeStartPos, cubeStartOrientation, flags=p.URDF_USE_INERTIA_FROM_FILE)
+robotId = p.loadURDF("./body_urdf/body_urdf.urdf",cubeStartPos, cubeStartOrientation, flags=p.URDF_USE_INERTIA_FROM_FILE)
 
 # # Create a fixed constraint to hold the robot in place
 # fixed_position = [0, 0, 0]  # Adjust height as needed for better visualization
@@ -28,70 +27,28 @@ constraint_id = p.createConstraint(
     childFramePosition=[0, 0, 2]
 )
 
-
-def calculate_distance(p1, p2):
-    return np.linalg.norm(np.array(p1) - np.array(p2))
-
-
-
-
 numJoints = p.getNumJoints(robotId)
 print("Number of Joints: ", numJoints)
 
-shoulder_joint = 0
-femur_joint = 3
-tibia_joint = 5
-end_effector = 6
-
-# Getting the position of the joints
-shoulder_pos = p.getLinkState(robotId, shoulder_joint)[0]
-femur_pos = p.getLinkState(robotId, femur_joint)[0]
-tibia_pos = p.getLinkState(robotId, tibia_joint)[0]
-end_effector_pos = p.getLinkState(robotId, end_effector)[0]
-
-# Calculating distance between the joints
-coxa = calculate_distance(shoulder_pos, femur_pos)
-femur = calculate_distance(femur_pos, tibia_pos)
-tibia = calculate_distance(tibia_pos, end_effector_pos)
-
-print("Shoulder to Femur Distance: ", coxa)
-print("Femur to Tibia Distance: ", femur)
-print("Tibia to End Effector Distance: ", tibia)
+hip_joint = 0
+knee_joint = 3
+ankle_joint = 5
 
 previous_pos = None
-
-
-
-def legIK(x,y,z):
-  D = np.sqrt((z**2 + y**2) - coxa**2)
-  G = np.sqrt(D**2 + x**2)
-  tibia_angle = np.arccos((G**2 - femur**2 - tibia**2)/(-2*femur*tibia))
-  femur_angle = np.arctan2(x,D) + np.arcsin((tibia * np.sin(tibia_angle)) / G)
-  coxa_angle = np.arctan2(y,z) + np.arctan2(D,coxa)
-
-  return [coxa_angle, femur_angle, tibia_angle]
-
-
-target_points = [(0, -0.36, 0.6), (0.6, -0.36, 0.6)]
-
-
 
 while True:
     for i in range (10000):
         target_position = 0.5 *math.sin(i*0.01)
 
-        # if i % 100 == 0:
-        #     print("Target Position: ", target_position)
+        if i % 100 == 0:
+            print("Target Position: ", target_position)
 
         # p.setJointMotorControl2(robotId, knee_joint, p.POSITION_CONTROL, targetPosition = target_position)
-        p.setJointMotorControl2(robotId, tibia_joint, p.POSITION_CONTROL, targetPosition = target_position)
+        p.setJointMotorControl2(robotId, ankle_joint, p.POSITION_CONTROL, targetPosition = target_position)
         p.stepSimulation()
 
         link_state = p.getLinkState(robotId, 6)
         current_pos = link_state[0]
-
-        # if i % 100 == 0:
-        #     print("Current Position: ", current_pos)
 
         if previous_pos is not None:
             p.addUserDebugLine(previous_pos, current_pos, [1, 0, 0], 1)
