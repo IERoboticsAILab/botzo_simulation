@@ -83,7 +83,7 @@ def legIK(x,y,z):
 # x_values = np.linspace(x_start, x_end, num_points)
 # target_points = [(x, y_fixed, z_fixed) for x in x_values]
 
-target_points = [(0, -0.36, 0.6), (0, -0.36, 0.8)]
+target_points = [(0, -0.36, 0.6), (0, -0.36, 0.8), (0, -0.36, 1.0)]
 
 while True: 
     # Simulation loop to move the joints to each target point
@@ -95,7 +95,7 @@ while True:
         # Run the simulation for a certain number of steps to allow the leg to reach the target
         for i in range(500):
             # Control each joint to move towards the calculated IK angles
-            p.setJointMotorControl2(robotId, shoulder_joint, p.POSITION_CONTROL, targetPosition=coxa_angle)
+            p.setJointMotorControl2(robotId, shoulder_joint, p.POSITION_CONTROL, targetPosition=0)
             p.setJointMotorControl2(robotId, femur_joint, p.POSITION_CONTROL, targetPosition=femur_angle)
             p.setJointMotorControl2(robotId, tibia_joint, p.POSITION_CONTROL, targetPosition=tibia_angle)
             
