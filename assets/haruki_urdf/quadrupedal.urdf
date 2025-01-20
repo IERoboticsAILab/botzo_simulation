@@ -18,12 +18,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/base.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/base.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/base.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/base.stl"/>
       </geometry>
     </collision>
   </link>
@@ -60,12 +60,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/abduction_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/abduction_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/abduction_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/abduction_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -102,12 +102,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/upper_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/upper_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/upper_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/upper_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -144,12 +144,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/lower_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/lower_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/lower_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/lower_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -186,12 +186,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/abduction_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/abduction_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/abduction_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/abduction_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -228,12 +228,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/upper_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/upper_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/upper_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/upper_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -270,12 +270,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/lower_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/lower_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/lower_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/lower_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -312,12 +312,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/abduction_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/abduction_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/abduction_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/abduction_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -354,12 +354,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/upper_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/upper_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/upper_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/upper_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -396,12 +396,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/lower_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/lower_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/lower_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/lower_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -438,12 +438,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/abduction_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/abduction_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/abduction_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/abduction_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -480,12 +480,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/upper_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/upper_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/upper_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/upper_link.stl"/>
       </geometry>
     </collision>
   </link>
@@ -522,12 +522,12 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="/meshes/stl/lower_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/lower_link.stl"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/meshes/stl/lower_link.stl"/>
+        <mesh filename="../assets/haruki_urdf/meshes/lower_link.stl"/>
       </geometry>
     </collision>
   </link>

@@ -84,7 +84,7 @@ def run_simulation(robot_id, num_robots, use_gui, coord_queue, rev_status, max_p
         robot = Quadrupedal(
             timeStep=1./240.,
             initialCoMheight=0.3,
-            robotPATH="../assets/haruki_urdf/quadrupedal.urdf",# "../assets/body_urdf/body_urdf.urdf",
+            robotPATH="../assets/haruki_urdf/quadrupedal.urdf",
             startPosition=[0, i, 0.55],
             startOrientation=[0., 0., 0.],
             maxForce=12
@@ -284,7 +284,7 @@ def plot_trajectories(coord_queue, num_simulations, max_points=500):
 
 def main():
     num_robots = 1 # Number of robots per simulation
-    num_simulations = 1 # Number of parallel simulations
+    num_simulations = 3 # Number of parallel simulations
 
     # Multiprocessing Queue for thread-safe coordinate logging
     coord_queue = Queue(maxsize=1000)  # Limiting queue size to prevent memory issues
@@ -337,7 +337,7 @@ def main():
                     break  # Exit monitoring loop
 
         # Start plotting
-        # plot_trajectories(coord_queue, num_simulations)
+        plot_trajectories(coord_queue, num_simulations)
     except KeyboardInterrupt:
         print("Plotting stopped by user.")
     finally:
