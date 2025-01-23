@@ -30,7 +30,7 @@ class Robot:
         # lateralFriction = 0 for 0 friction
         pb.changeDynamics(self._planeId, -1, lateralFriction=0)
 
-        self._robotId = pb.loadURDF(robotPATH,startPosition, pb.getQuaternionFromEuler(startOrientation))
+        self._robotId = pb.loadURDF(robotPATH,startPosition, pb.getQuaternionFromEuler(startOrientation), globalScaling=1.0)
         self._controlMode = controlMode
         self.numJoint = pb.getNumJoints(self._robotId)
         self._jointIdList = [i for i in range(self.numJoint)]
